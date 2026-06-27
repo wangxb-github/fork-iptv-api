@@ -3,9 +3,9 @@
 # This is a list of subscription sources, with one subscription address per line
 # Supports setting UA: https://xxx.com/subscribe.m3u UA="xxx"
 
-
-
-
+# CCSH/IPTV 每日北京时间 04:00 自动更新的完整直播源（txt 格式，多接口）
+# 包含央视频道、卫视频道、地方台等约 1000+ 候选接口
+https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.txt
 
 [WHITELIST]
 # 以下是订阅源的白名单，白名单内的订阅源获取的接口将不会参与测速，始终保留至结果最前。
