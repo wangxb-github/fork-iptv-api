@@ -60,7 +60,15 @@ open_filter_speed = config.open_filter_speed
 min_speed = config.min_speed
 open_filter_resolution = config.open_filter_resolution
 min_resolution_value = config.min_resolution_value
+category_min_resolution_overrides = config.category_min_resolution_overrides
 resolution_speed_map = config.resolution_speed_map
+
+
+def _get_effective_min_resolution(category: str = None) -> int:
+    """根据分类查表，返回当前频道的最小分辨率阈值（像素数）。"""
+    if category and category in category_min_resolution_overrides:
+        return category_min_resolution_overrides[category]
+    return min_resolution_value
 open_history = config.open_history
 open_local = config.open_local
 open_rtmp = config.open_rtmp
@@ -153,7 +161,7 @@ def format_channel_data(url: str, origin: OriginType) -> ChannelData:
     }
 
 
-def check_channel_need_frozen(info) -> bool:
+def check_channel_need_frozen(info, category: str = None) -> bool:
     """
     Check if the channel need to be frozen
     """
@@ -161,7 +169,8 @@ def check_channel_need_frozen(info) -> bool:
     if delay == -1 or info.get("speed", 0) == 0:
         return True
     if info.get("resolution"):
-        if get_resolution_value(info["resolution"]) < min_resolution_value:
+        threshold = _get_effective_min_resolution(category)
+        if get_resolution_value(info["resolution"]) < threshold:
             return True
     return False
 
@@ -698,7 +707,7 @@ def append_total_data(
                 )
 
 
-def is_valid_speed_result(info) -> bool:
+def is_valid_speed_result(info, category: str = None) -> bool:
     """
     Check if the speed test result is valid
     """
@@ -720,7 +729,8 @@ def is_valid_speed_result(info) -> bool:
                 res_value = get_resolution_value(res_str)
             except Exception:
                 res_value = 0
-            if res_value < min_resolution_value:
+            threshold = _get_effective_min_resolution(category)
+            if res_value < threshold:
                 return False
 
         return True
@@ -800,12 +810,12 @@ async def test_speed(data, ipv6=False, callback=None, on_task_complete=None):
         merged = {**info, **result}
         grouped_results[cate][name].append(merged)
 
-        if check_channel_need_frozen(merged):
+        if check_channel_need_frozen(merged, category=cate):
             mark_url_bad(merged.get("url"))
         else:
             mark_url_good(merged.get("url"))
 
-        is_valid = is_valid_speed_result(merged)
+        is_valid = is_valid_speed_result(merged, category=cate)
         if is_valid:
             valid_count_by_channel[(cate, name)] += 1
             if not open_full_speed_test and valid_count_by_channel[(cate, name)] >= urls_limit:
@@ -928,7 +938,7 @@ def generate_channel_statistic(logger, cate, name, values):
     total = len(values)
     valid_items = [
         v for v in values
-        if is_valid_speed_result(v)
+        if is_valid_speed_result(v, category=cate)
     ]
     valid = len(valid_items)
     valid_rate = (valid / total * 100) if total > 0 else 0
