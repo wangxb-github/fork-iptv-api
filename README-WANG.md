@@ -18,34 +18,77 @@
 
 ---
 
+## 🚀 自动 push 到 GitHub（**新功能**）
+
+`./run.sh` 跑完后**自动**把结果推到 GitHub。你可以通过固定链接获取最新测速列表，配置到其他工具里。
+
+### 固定链接（不变，永久可用）
+
+```
+https://raw.githubusercontent.com/wangxb-github/fork-iptv-api/master/live/result.m3u
+https://cdn.jsdelivr.net/gh/wangxb-github/fork-iptv-api@master/live/result.m3u
+```
+
+- **raw** 链接：GitHub 直链，~几秒延迟
+- **jsdelivr** 链接：CDN 加速，**有 12 小时缓存**（需要最新数据时用 raw）
+
+其他可用文件：`live/result.txt`、`live/ipv4/result.m3u`、`live/ipv4/result.txt`、`live/ipv6/result.{m3u,txt}`。
+
+### 工作原理
+
+1. 本地测速完成后，run.sh 调用 push.sh
+2. push.sh 把 `output/result.m3u` 等 6 个文件复制到 `live/` 目录
+3. 自动 `git add live/ + commit + push`（commit message 含日期 + 接口数）
+4. 你就能从固定 URL 拿到最新列表
+
+### 配置 push（可选）
+
+`push_config.ini` 控制：
+- `target_branch` 推哪个分支（默认 `master`）
+- `git_user_name` / `git_user_email` 提交者（必须和 SSH key 关联的 GitHub 账号一致）
+- `publish_files` 要发布的文件列表（管道分隔）
+- `auto_pull` push 前自动拉取远端
+- `auto_rollback` push 失败时自动回滚 commit
+
+跳过 push：`SKIP_PUSH=1 ./run.sh`
+
+---
+
 ## 跑
 
 ```bash
-cd /Users/wangxiaobin/Documents/work/github/iptv-api
-./run.sh         # 完整测速，约 60 分钟（实测）
-./run.sh quick   # 不测速，10 秒出结果
+cd /Users/wangxiaobin/Documents/work/github/fork-iptv-api
+./run.sh         # 完整测速，约 60 分钟，**跑完自动 push 到 GitHub**
+./run.sh quick   # 不测速，10 秒出结果，跑完自动 push
 ```
 
-`./run.sh` 自动做两件事：
+`./run.sh` 自动做的事：
 1. 从 CCSH 拉取当天最新频道模板（每天 04:00 CCSH 自动更新），写入 `config/demo.txt`
 2. 跑 Guovin 主程序，本地 Mac 严格测速，输出多格式结果
+3. **自动 push 结果到 GitHub**（无变化时不 push）
 
 ## 输出
 
-`output/` 下有 6 个文件。把 `output/result.m3u` 拖进播放器（VLC/IINA/TVBox/PotPlayer）即可。
+### 本地（`output/`，已加入 .gitignore，不上传）
 
-其他文件：`result.txt`（txt 格式）、`ipv4/result.{m3u,txt}`、`ipv6/result.{m3u,txt}`。
+6 个文件：`result.{txt,m3u}`、`ipv4/result.{txt,m3u}`、`ipv6/result.{txt,m3u}`。把 `output/result.m3u` 拖进播放器（VLC/IINA/TVBox/PotPlayer）即可。
+
+### 远端（`live/`，推送到 GitHub）
+
+通过固定链接（见上）访问。
 
 ## 改配置
 
 | 想改什么 | 改哪里 |
 |---|---|
-| 频道列表 | `config/demo.txt`（默认全量 685 频道；想精简就恢复成原版 74 频道） |
+| 频道列表 | `config/demo.txt`（默认全量 685 频道） |
 | 测速严格度 | `config/user_config.ini`（`min_resolution` / `min_speed`） |
+| 分类放宽到 720p | `config/user_config.ini` 的 `category_min_resolution_overrides` |
 | 加本地接口（白名单） | `config/local.txt`：`频道名,URL$!` |
 | 屏蔽关键字 | `config/blacklist.txt` |
 | 订阅源 | `config/subscribe.txt`（默认指向 CCSH live.txt） |
-| 跳过低质量分类 | `fetch_demo.py` 顶部的 `EXCLUDED_GENRES`（默认已排除 MTV/直播中国 等） |
+| 跳过低质量分类 | `fetch_demo.py` 顶部的 `EXCLUDED_GENRES` |
+| Push 配置 | `push_config.ini`（分支、提交者、发布文件） |
 
 改完再跑 `./run.sh` 生效。
 
@@ -53,8 +96,8 @@ cd /Users/wangxiaobin/Documents/work/github/iptv-api
 
 - **结果空**：严格模式过滤太多 → 把 `min_speed` / `min_resolution` 调低
 - **跑太久**：把 `speed_test_limit` 调大（默认 10），或关掉 `open_filter_resolution`
-- **想只看电视台不跑电影**：把 `fetch_demo.py` 的 `EXCLUDED_GENRES` 加上 `电影/电视剧/综艺频道/解说频道/儿童频道/NewTV`，并恢复默认 demo.txt
-- **想回滚默认配置**：`cp config/config.ini.bak config/config.ini`
+- **Push 失败**：检查 SSH key 是否配置（`ssh -T git@github.com`）
+- **想回滚默认配置**：`git checkout config/config.ini`（注：原版 `config.ini.bak` 已清理）
 
 ## 更新工具
 
