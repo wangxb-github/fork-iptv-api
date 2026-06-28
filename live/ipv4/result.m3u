@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/e.xml.gz"
-#EXTINF:-1 tvg-id="# 此文件由 fetch_demo.py 自动从 CCSH/IPTV 同步" tvg-name="# 此文件由 fetch_demo.py 自动从 CCSH/IPTV 同步" tvg-logo="https://www.xn--rgv465a.top/tvlogo/# 此文件由 fetch_demo.py 自动从 CCSH/IPTV 同步.png" group-title="🕘️更新时间",2026-06-27 21:43:23
+#EXTINF:-1 tvg-id="# 此文件由 fetch_demo.py 自动从 CCSH/IPTV 同步" tvg-name="# 此文件由 fetch_demo.py 自动从 CCSH/IPTV 同步" tvg-logo="https://www.xn--rgv465a.top/tvlogo/# 此文件由 fetch_demo.py 自动从 CCSH/IPTV 同步.png" group-title="🕘️更新时间",2026-06-28 09:59:12
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226016/index.m3u8
 #EXTINF:-1 tvg-id="CCTV-1" tvg-name="CCTV1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV1.png" group-title="央视频道",CCTV1
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226016/index.m3u8
@@ -2951,6 +2951,8 @@ http://47.104.178.59:3566/838151753
 http://hlszymgsplive.miguvideo.com:8080/migu/kailu/nanjingsb/50/20230719/index.m3u8?msisdn=2be6b2ec9fcf10d2c2457e2c710e172c&mdspid=&spid=699067&netType=0&sid=5910021864&pid=2028597139&timestamp=20260626080211&Channel_ID=0116_2600034600-99000-201600010010028&ProgramID=838151753&ParentNodeID=-99&assertID=5910021864&client_ip=171.8.79.254&SecurityKey=20260626080211&promotionId=&mvid=5900006207&mcid=500020&playurlVersion=WX-A1-9.6.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=c72b4362ffb7f201674a420ee531b8c1&sv=10004&ct=android
 #EXTINF:-1 tvg-id="南京十八" tvg-name="南京十八" tvg-logo="https://www.xn--rgv465a.top/tvlogo/南京十八.png" group-title="江苏频道",南京十八
 http://8.138.7.223/tv/migu3.php?id=njsb
+#EXTINF:-1 tvg-id="南京十八" tvg-name="南京十八" tvg-logo="https://www.xn--rgv465a.top/tvlogo/南京十八.png" group-title="江苏频道",南京十八
+http://mgsp-hs2.live.miguvideo.com:8088/migu/kailu/nanjingsb/50/20230719/index.m3u8?msisdn=2be6b2ec9fcf10d2c2457e2c710e172c&mdspid=&spid=699067&netType=0&sid=5910021864&pid=2028597139&timestamp=20260627080239&Channel_ID=0116_2600034600-99000-201600010010028&ProgramID=838151753&ParentNodeID=-99&assertID=5910021864&client_ip=171.8.79.254&SecurityKey=20260627080239&promotionId=&mvid=5900006207&mcid=500020&playurlVersion=WX-A1-9.6.1.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=e84c6b2fa91a8b137cef139c86d3c892&sv=10004&ct=android
 #EXTINF:-1 tvg-id="南京少儿" tvg-name="南京少儿" tvg-logo="https://www.xn--rgv465a.top/tvlogo/南京少儿.png" group-title="江苏频道",南京少儿
 http://nklive.nbs.cn/hls/e0981f3f-1a20-4a59-b8d1-17feb83a4610/index.m3u8
 #EXTINF:-1 tvg-id="南京教科" tvg-name="南京教科" tvg-logo="https://www.xn--rgv465a.top/tvlogo/南京教科.png" group-title="江苏频道",南京教科
