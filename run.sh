@@ -107,8 +107,8 @@ for f in output/result.txt output/result.m3u \
             # txt 格式：统计 "频道名,http..." 行
             count=$(awk -F',' 'NF==2 && $2 ~ /^http/ {n++} END{print n+0}' "$f")
         else
-            # m3u 格式：统计以 http 开头的接口行
-            count=$(grep -c "^http" "$f")
+            # m3u 格式：统计以 http 开头的接口行（用 awk 避免 grep 无匹配时退出码 1 触发 set -e）
+            count=$(awk '/^http/ {n++} END{print n+0}' "$f")
         fi
         echo "  ✅ $f  ($size, $count 个接口)"
     else
@@ -125,3 +125,18 @@ for f in output/log/result.log output/log/speed_test.log output/log/statistic.lo
 done
 echo ""
 echo "👉 在播放器中加载 output/result.m3u 即可观看（如需 ipv4 单独版本: output/ipv4/result.m3u）"
+
+echo ""
+echo "=========================================="
+echo "  📤 自动 push 到 GitHub..."
+echo "=========================================="
+# 默认自动 push；如需跳过可设 SKIP_PUSH=1
+if [ "${SKIP_PUSH:-0}" = "1" ]; then
+    echo "⏭️  SKIP_PUSH=1, 跳过 push"
+else
+    if [ -x "./push.sh" ]; then
+        ./push.sh
+    else
+        echo "⚠️  push.sh 不存在或不可执行，跳过 push"
+    fi
+fi
