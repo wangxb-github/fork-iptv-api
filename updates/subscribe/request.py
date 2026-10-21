@@ -19,6 +19,7 @@ from utils.tools import (
     get_request_url_candidates,
     save_url_content,
     disable_urls_in_file,
+    with_cache_bust,
 )
 
 
@@ -173,9 +174,12 @@ async def get_channels_by_subscribe_urls(
                 async with semaphore:
                     if pause_wait:
                         await pause_wait()
+                    # Append a cache-busting query string so CDNs (jsDelivr, raw.githubusercontent.com, ...)
+                    # are forced to fetch the latest version from origin instead of returning a stale cached copy.
+                    fetch_url = with_cache_bust(subscribe_url)
                     content = await fetch_first(
                         session,
-                        get_request_url_candidates(subscribe_url),
+                        get_request_url_candidates(fetch_url),
                         name=subscribe_url,
                         headers=merge_headers(headers),
                         timeout=request_timeout,

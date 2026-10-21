@@ -2,10 +2,42 @@
 # 支持设置UA：https://xxx.com/subscribe.m3u UA="xxx"
 # This is a list of subscription sources, with one subscription address per line
 # Supports setting UA: https://xxx.com/subscribe.m3u UA="xxx"
+#
+# =====================================================================
+# 多源策略（按 7 条 → 总候选 ~3500 条 → 测速后 500~800 可用）
+# - 经由 utils.tools.with_cache_bust 自动追加 ?nocache=<ts>，每次 run.sh
+#   都强制 jsDelivr/raw.githubusercontent.com 回源到 GitHub 最新版。
+# - 当某源失败达到重试上限，会被 open_auto_disable_source 自动停用
+#   （在前缀加 #），下次跑可手动启用或删 # 恢复。
+# =====================================================================
 
+# [A] CCSH/IPTV — 主力源，每日北京时间 04:00 自动更新（txt 格式，多接口）
+#     包含央视频道、卫视频道、地方台等约 1300+ 候选接口
+# https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.txt
+https://cdn.jsdelivr.net/gh/CCSH/IPTV@main/live.txt
 
+# [B] imDazui/Tvlist-awesome — 全国通用源（m3u 格式，多接口，1063 条）
+#     央视/卫视/地方台多接口备份，与 CCSH 互补去重
+https://cdn.jsdelivr.net/gh/imDazui/Tvlist-awesome-m3u-m3u8@master/m3u/国内电视台202509.m3u
 
+# [C] imDazui/Tvlist-awesome — ★轮播源★（43 条，专门补缺"电影/电视剧/综艺"）
+#     包含 NewTV 超级电视/电视剧/电影/体育、华数、黑莓、CIBN、SiTV 牌照方
+#     24/7 不间断轮播对应内容（这正是 CCSH 缺的影视综艺类）
+https://cdn.jsdelivr.net/gh/imDazui/Tvlist-awesome-m3u-m3u8@master/m3u/轮播_华数.黑莓.NewTV.SiTV.CIBN.m3u
 
+# [D] vbskycn/iptv — 自研扫描器，每天多次扫描验证（txt 格式，802 条）
+#     服务器端实测存活后才发布，最新鲜稳定（IPv4 + IPv6 双版本）
+https://live.zbds.top/tv/iptv4.txt
+
+# [E] suxuang/myIPTV — 高清 + 4K + 港澳台电影（m3u 格式，1210 条）
+#     含 4K 频道、http-user-agent 验证头、详细分类
+https://cdn.jsdelivr.net/gh/suxuang/myIPTV@main/ipv4.m3u
+
+# [F] imDazui/Tvlist-awesome — 港澳台/海外（182 条，TVB/TVBS/中天/民视等）
+https://cdn.jsdelivr.net/gh/imDazui/Tvlist-awesome-m3u-m3u8@master/m3u/台湾香港澳门202506.m3u
+
+# [G] imDazui/Tvlist-awesome — 国际/体育专项（666 条，含 Discovery/BBC/CNN 等）
+https://cdn.jsdelivr.net/gh/imDazui/Tvlist-awesome-m3u-m3u8@master/m3u/国外电视台202409.m3u
 
 [WHITELIST]
 # 以下是订阅源的白名单，白名单内的订阅源获取的接口将不会参与测速，始终保留至结果最前。

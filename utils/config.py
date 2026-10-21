@@ -139,6 +139,7 @@ CONFIG_SCHEMA = {
     "min_resolution": ConfigRule(kind="resolution"),
     "max_resolution": ConfigRule(kind="resolution"),
     "resolution_speed_map": ConfigRule(kind="resolution_speed_map", allow_empty=True),
+    "category_min_resolution_overrides": ConfigRule(allow_empty=True),
     "location": ConfigRule(allow_empty=True),
     "isp": ConfigRule(allow_empty=True),
     "logo_url": ConfigRule(allow_empty=True),
@@ -348,6 +349,31 @@ class ConfigManager:
     @property
     def min_resolution_value(self):
         return get_resolution_value(self.min_resolution)
+
+    @property
+    def category_min_resolution_overrides(self) -> dict[str, int]:
+        """
+        按分类覆盖最小分辨率阈值。格式：分类1|分类2:分辨率;分类3:分辨率
+        示例：电影|电视剧|综艺频道|NewTV|儿童频道|国际台:1280x720
+        """
+        raw = self.config.get("Settings", "category_min_resolution_overrides", fallback="").strip()
+        result: dict[str, int] = {}
+        if not raw:
+            return result
+        for group in raw.split(";"):
+            group = group.strip()
+            if ":" not in group:
+                continue
+            names_part, res_part = group.split(":", 1)
+            try:
+                res_value = get_resolution_value(res_part.strip())
+            except Exception:
+                continue
+            for name in names_part.split("|"):
+                name = name.strip()
+                if name:
+                    result[name] = res_value
+        return result
 
     @property
     def max_resolution(self):

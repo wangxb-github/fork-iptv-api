@@ -60,7 +60,15 @@ location_list = config.location
 isp_list = config.isp
 open_supply = config.open_supply
 min_speed = config.min_speed
+category_min_resolution_overrides = config.category_min_resolution_overrides
 resolution_speed_map = config.resolution_speed_map
+
+
+def _get_effective_min_resolution(category: str = None) -> int:
+    """根据分类查表，返回当前频道的最小分辨率阈值（像素数）。"""
+    if category and category in category_min_resolution_overrides:
+        return category_min_resolution_overrides[category]
+    return config.min_resolution_value
 open_history = config.open_history
 open_local = config.open_local
 open_rtmp = config.rtmp_available
@@ -170,13 +178,14 @@ def format_channel_data(url: str, origin: OriginType) -> ChannelData:
     }
 
 
-def check_channel_need_frozen(info) -> bool:
+def check_channel_need_frozen(info, category: str = None) -> bool:
     """
     Check if the channel need to be frozen
     """
     return channel_result_rejection(
         info,
         retain_special=True,
+        min_resolution=_get_effective_min_resolution(category),
     ) in {"unreachable", "filtered_resolution"}
 
 
@@ -796,14 +805,17 @@ def append_total_data(
         )
 
 
-def is_valid_speed_result(info) -> bool:
+def is_valid_speed_result(info, category: str = None) -> bool:
     """
     Check if the speed test result is valid
     """
-    return is_channel_result_valid(info)
+    return is_channel_result_valid(
+        info,
+        min_resolution=_get_effective_min_resolution(category),
+    )
 
 
-def get_speed_test_status(info, is_valid: bool) -> str:
+def get_speed_test_status(info, is_valid: bool, category: str = None) -> str:
     status = info.get("test_status")
     if status in {"timeout", "request_error", "probe_error", "cancelled"}:
         return status
@@ -813,7 +825,14 @@ def get_speed_test_status(info, is_valid: bool) -> str:
     speed = info.get("speed") or 0
     if delay is None or delay == -1 or not speed:
         return status or "unreachable"
-    return channel_result_rejection(info) or status or "invalid"
+    return (
+        channel_result_rejection(
+            info,
+            min_resolution=_get_effective_min_resolution(category),
+        )
+        or status
+        or "invalid"
+    )
 
 
 def format_speed_test_record(record):
@@ -856,7 +875,7 @@ def build_speed_test_record(cate, name, merged, is_valid, run_id=None):
         "video_codec": merged.get("video_codec"),
         "audio_codec": merged.get("audio_codec"),
         "error_type": merged.get("error_type"),
-        "status": get_speed_test_status(merged, is_valid),
+        "status": get_speed_test_status(merged, is_valid, category=cate),
         "valid": is_valid,
     }
 
@@ -923,12 +942,12 @@ async def test_speed(
         merged = {**info, **result}
         grouped_results[cate][name].append(merged)
 
-        if check_channel_need_frozen(merged):
+        if check_channel_need_frozen(merged, category=cate):
             mark_url_bad(merged.get("url"))
         else:
             mark_url_good(merged.get("url"))
 
-        is_valid = is_valid_speed_result(merged)
+        is_valid = is_valid_speed_result(merged, category=cate)
         reached_limit = False
         if is_valid:
             valid_count_by_channel[(cate, name)] += 1
@@ -1191,18 +1210,21 @@ def build_channel_statistic(cate, name, values):
     total = len(values)
     valid_items = [
         v for v in values
-        if is_valid_speed_result(v)
+        if is_valid_speed_result(v, category=cate)
     ]
     valid = len(valid_items)
     valid_rate = (valid / total * 100) if total > 0 else 0
     ipv4_count = len([v for v in values if v.get("ipv_type") == "ipv4"])
     ipv6_count = len([v for v in values if v.get("ipv_type") == "ipv6"])
     min_delay = min((v.get("delay") for v in values if (v.get("delay") or -1) != -1), default=-1)
-    max_speed = max(
-        (v.get("speed") for v in values if (v.get("speed") or 0) > 0 and not math.isinf(v.get("speed"))),
-        default=0
-    )
-    avg_speed = sum((v.get("speed") or 0) for v in valid_items) / valid if valid > 0 else 0
+    # max_speed 与 avg_speed 都基于 valid_items（通过严格过滤的接口）
+    # 避免 "max_speed=8.94 但 avg_speed=0" 的反直觉现象
+    _speeds = [
+        v.get("speed") for v in valid_items
+        if (v.get("speed") or 0) > 0 and not math.isinf(v.get("speed"))
+    ]
+    max_speed = max(_speeds, default=0)
+    avg_speed = sum(_speeds) / len(_speeds) if _speeds else 0
     max_resolution = max(
         (v.get("resolution") for v in values if v.get("resolution")),
         key=lambda r: get_resolution_value(r),

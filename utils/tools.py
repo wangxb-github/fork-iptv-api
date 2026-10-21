@@ -307,7 +307,7 @@ def check_ipv6_support():
     url = "https://ipv6.tokyo.test-ipv6.com/ip/?callback=?&testdomain=test-ipv6.com&testname=test_aaaa"
     try:
         print(t("msg.check_ipv6_support"))
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, timeout=10, proxies={"http": None, "https": None})
         if response.status_code == 200:
             print(t("msg.ipv6_supported"))
             return True
@@ -947,6 +947,30 @@ def join_url(url1: str, url2: str) -> str:
     if not url1.endswith("/"):
         url1 += "/"
     return url1 + url2
+
+
+def with_cache_bust(url: str) -> str:
+    """
+    Append a unique cache-busting query parameter so CDNs (jsDelivr,
+    raw.githubusercontent.com, etc.) are forced to fetch the latest version
+    from origin instead of returning a cached stale copy.
+
+    jsDelivr caches GitHub-served files aggressively (cached entries can be
+    hours to days old after the upstream file changes). Adding any non-cached
+    query parameter is the documented way to bypass jsDelivr's cache and
+    forces an origin fetch. The same trick clears raw.githubusercontent.com's
+    short-lived edge cache.
+
+    Existing query parameters are preserved; the cache-buster is appended
+    with `?` if absent, or `&` if present.
+
+    :param url: The original URL.
+    :return: The URL with a fresh ``nocache=<unix-ts>`` parameter appended.
+    """
+    if not url:
+        return url
+    sep = "&" if "?" in url else "?"
+    return f"{url}{sep}nocache={int(time())}"
 
 
 def github_blob_to_raw(url: str) -> str:

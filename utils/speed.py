@@ -108,7 +108,7 @@ def create_speed_test_session(concurrency: int):
     return ClientSession(
         connector=TCPConnector(ssl=False, limit=limit, limit_per_host=min(2, limit), ttl_dns_cache=300),
         timeout=ClientTimeout(total=None),
-        trust_env=True,
+        trust_env=False,
     )
 
 
@@ -148,7 +148,7 @@ async def get_speed_with_download(url: str, headers: dict = None, session: Any =
     request_timeout = min(timeout, max_duration) if max_duration else timeout
 
     if session is None:
-        session = ClientSession(connector=TCPConnector(ssl=False), trust_env=True)
+        session = ClientSession(connector=TCPConnector(ssl=False), trust_env=False)
         created_session = True
     else:
         created_session = False
@@ -217,7 +217,7 @@ async def get_headers(url: str, headers: dict = None, session: Any = None, timeo
     Get the headers of the url
     """
     if session is None:
-        session = ClientSession(connector=TCPConnector(ssl=False), trust_env=True)
+        session = ClientSession(connector=TCPConnector(ssl=False), trust_env=False)
         created_session = True
     else:
         created_session = False
@@ -242,7 +242,7 @@ async def get_url_content(url: str, headers: dict = None, session: Any = None,
     Get the content of the url
     """
     if session is None:
-        session = ClientSession(connector=TCPConnector(ssl=False), trust_env=True)
+        session = ClientSession(connector=TCPConnector(ssl=False), trust_env=False)
         created_session = True
     else:
         created_session = False
@@ -434,7 +434,7 @@ async def get_delay_requests(url, timeout=speed_test_timeout, proxy=None):
     Get the delay of the url by requests
     """
     async with ClientSession(
-            connector=TCPConnector(ssl=False), trust_env=True
+            connector=TCPConnector(ssl=False), trust_env=False
     ) as session:
         start = time()
         end = None
@@ -707,25 +707,7 @@ def get_sort_result(
     """
     get the sort result
     """
-    total_result = []
-    for result in results:
-        if not ipv6_support and result["ipv_type"] == "ipv6":
-            result.update(default_ipv6_result)
-            total_result.append(result)
-            continue
-        if not is_channel_result_valid(
-                result,
-                retain_special=True,
-                supply=supply,
-                filter_speed=filter_speed,
-                min_speed=min_speed,
-                resolution_speed_map=resolution_speed_map,
-                filter_resolution=filter_resolution,
-                min_resolution=min_resolution,
-                max_resolution=max_resolution,
-        ):
-            continue
-        total_result.append(result)
+    results_list = list(results)
 
     def sort_key(item):
         keys = []
@@ -739,7 +721,36 @@ def get_sort_result(
                 keys.append(-(get_resolution_value(item.get("resolution") or "") or 0))
         return tuple(keys)
 
-    total_result.sort(key=sort_key)
+    def filter_with_thresholds(current_min_res, current_min_speed):
+        result_list = []
+        for result in results_list:
+            if not ipv6_support and result.get("ipv_type") == "ipv6":
+                result.update(default_ipv6_result)
+                result_list.append(result)
+                continue
+            if not is_channel_result_valid(
+                    result,
+                    retain_special=True,
+                    supply=supply,
+                    filter_speed=filter_speed,
+                    min_speed=current_min_speed,
+                    resolution_speed_map=resolution_speed_map,
+                    filter_resolution=filter_resolution,
+                    min_resolution=current_min_res,
+                    max_resolution=max_resolution,
+            ):
+                continue
+            result_list.append(result)
+        result_list.sort(key=sort_key)
+        return result_list
+
+    total_result = filter_with_thresholds(min_resolution, min_speed)
+
+    if not total_result and not supply and filter_resolution:
+        res_720p_value = 1280 * 720
+        if min_resolution > res_720p_value:
+            fallback_speed = min_speed / 2.0 if min_speed >= 1.0 else 0.5
+            total_result = filter_with_thresholds(res_720p_value, fallback_speed)
     return total_result
 
 
