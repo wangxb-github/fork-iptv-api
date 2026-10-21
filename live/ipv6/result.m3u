@@ -1,0 +1,99 @@
+#EXTM3U x-tvg-url="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/e.xml.gz"
+#EXTINF:-1 tvg-id="# 此文件由 fetch_demo.py + fetch_demo_extra.py + fetch_demo_dedup.py 自动维护" tvg-name="# 此文件由 fetch_demo.py + fetch_demo_extra.py + fetch_demo_dedup.py 自动维护" tvg-logo="https://www.xn--rgv465a.top/tvlogo/# 此文件由 fetch_demo.py + fetch_demo_extra.py + fetch_demo_dedup.py 自动维护.png" group-title="🕘️更新时间",2026-10-17 21:12:29
+http://[2409:8087:1:20:20::26]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226552/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EXOsrWMA-UCdUl1hQSR9EKw%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNNg3bzRax0E9tLmO9xgXVx8%2CEND
+#EXTINF:-1 tvg-id="淘电影" tvg-name="淘电影" tvg-logo="https://www.xn--rgv465a.top/tvlogo/淘电影.png" group-title="电影",淘电影
+http://[2409:8087:1:20:20::26]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226552/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EXOsrWMA-UCdUl1hQSR9EKw%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNNg3bzRax0E9tLmO9xgXVx8%2CEND
+#EXTINF:-1 tvg-id="NewTV中国功夫" tvg-name="NewTV中国功夫" tvg-logo="https://www.xn--rgv465a.top/tvlogo/NewTV中国功夫.png" group-title="NewTV",NewTV中国功夫
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/2000000003000000009/index.m3u8?channel-id=hnbblive&Contentid=2000000003000000009&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV军事评论" tvg-name="NewTV军事评论" tvg-logo="https://www.xn--rgv465a.top/tvlogo/NewTV军事评论.png" group-title="NewTV",NewTV军事评论
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/2000000003000000022/index.m3u8?channel-id=hnbblive&Contentid=2000000003000000022&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV军旅剧场" tvg-name="NewTV军旅剧场" tvg-logo="https://www.xn--rgv465a.top/tvlogo/NewTV军旅剧场.png" group-title="NewTV",NewTV军旅剧场
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/2000000003000000014/index.m3u8?channel-id=hnbblive&Contentid=2000000003000000014&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV农业致富" tvg-name="NewTV农业致富" tvg-logo="https://www.xn--rgv465a.top/tvlogo/NewTV农业致富.png" group-title="NewTV",NewTV农业致富
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/6193684637634073625/index.m3u8?channel-id=ystenlive&Contentid=6193684637634073625&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV古装剧场" tvg-name="NewTV古装剧场" tvg-logo="https://www.xn--rgv465a.top/tvlogo/NewTV古装剧场.png" group-title="NewTV",NewTV古装剧场
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/2000000003000000024/index.m3u8?channel-id=hnbblive&Contentid=2000000003000000024&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV怡伴健康" tvg-name="NewTV怡伴健康" tvg-logo="https://www.xn--rgv465a.top/tvlogo/NewTV怡伴健康.png" group-title="NewTV",NewTV怡伴健康
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/1000000005000266011/index.m3u8?channel-id=ystenlive&Contentid=1000000005000266011&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV精品大剧" tvg-name="NewTV精品大剧" tvg-logo="https://www.xn--rgv465a.top/tvlogo/NewTV精品大剧.png" group-title="NewTV",NewTV精品大剧
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/1000000004000013968/index.m3u8?channel-id=ystenlive&Contentid=1000000004000013968&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV金牌综艺" tvg-name="NewTV金牌综艺" tvg-logo="https://www.xn--rgv465a.top/tvlogo/NewTV金牌综艺.png" group-title="NewTV",NewTV金牌综艺
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/1000000004000026167/index.m3u8?channel-id=ystenlive&Contentid=1000000004000026167&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV中国功夫" tvg-name="中国功夫" tvg-logo="https://www.xn--rgv465a.top/tvlogo/中国功夫.png" group-title="NewTV",中国功夫
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/2000000003000000009/index.m3u8?channel-id=hnbblive&Contentid=2000000003000000009&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV军事评论" tvg-name="军事评论" tvg-logo="https://www.xn--rgv465a.top/tvlogo/军事评论.png" group-title="NewTV",军事评论
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/2000000003000000022/index.m3u8?channel-id=hnbblive&Contentid=2000000003000000022&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV军旅剧场" tvg-name="军旅剧场" tvg-logo="https://www.xn--rgv465a.top/tvlogo/军旅剧场.png" group-title="NewTV",军旅剧场
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/2000000003000000014/index.m3u8?channel-id=hnbblive&Contentid=2000000003000000014&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV农业致富" tvg-name="农业致富" tvg-logo="https://www.xn--rgv465a.top/tvlogo/农业致富.png" group-title="NewTV",农业致富
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/6193684637634073625/index.m3u8?channel-id=ystenlive&Contentid=6193684637634073625&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV古装剧场" tvg-name="古装剧场" tvg-logo="https://www.xn--rgv465a.top/tvlogo/古装剧场.png" group-title="NewTV",古装剧场
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/2000000003000000024/index.m3u8?channel-id=hnbblive&Contentid=2000000003000000024&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV哒啵赛事" tvg-name="哒啵赛事" tvg-logo="https://www.xn--rgv465a.top/tvlogo/哒啵赛事.png" group-title="NewTV",哒啵赛事
+http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221225675/index.m3u8
+#EXTINF:-1 tvg-id="NewTV怡伴健康" tvg-name="怡伴健康" tvg-logo="https://www.xn--rgv465a.top/tvlogo/怡伴健康.png" group-title="NewTV",怡伴健康
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/1000000005000266011/index.m3u8?channel-id=ystenlive&Contentid=1000000005000266011&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV明星大片" tvg-name="明星大片" tvg-logo="https://www.xn--rgv465a.top/tvlogo/明星大片.png" group-title="NewTV",明星大片
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/1000000004000019008/index.m3u8?channel-id=ystenlive&Contentid=1000000004000019008&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV武搏世界" tvg-name="武搏世界" tvg-logo="https://www.xn--rgv465a.top/tvlogo/武搏世界.png" group-title="NewTV",武搏世界
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/2000000003000000007/index.m3u8?channel-id=hnbblive&Contentid=2000000003000000007&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV海外剧场" tvg-name="海外剧场" tvg-logo="https://www.xn--rgv465a.top/tvlogo/海外剧场.png" group-title="NewTV",海外剧场
+http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225671/index.m3u8
+#EXTINF:-1 tvg-id="NewTV精品大剧" tvg-name="精品大剧" tvg-logo="https://www.xn--rgv465a.top/tvlogo/精品大剧.png" group-title="NewTV",精品大剧
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/1000000004000013968/index.m3u8?channel-id=ystenlive&Contentid=1000000004000013968&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="纪实科教" tvg-name="纪实科教" tvg-logo="https://www.xn--rgv465a.top/tvlogo/纪实科教.png" group-title="NewTV",纪实科教
+http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221225729/index.m3u8
+#EXTINF:-1 tvg-id="NewTV金牌综艺" tvg-name="金牌综艺" tvg-logo="https://www.xn--rgv465a.top/tvlogo/金牌综艺.png" group-title="NewTV",金牌综艺
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/1000000004000026167/index.m3u8?channel-id=ystenlive&Contentid=1000000004000026167&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV明星大片" tvg-name="NewTV明星大片" tvg-logo="https://www.xn--rgv465a.top/tvlogo/NewTV明星大片.png" group-title="NewTV",NewTV明星大片
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/1000000004000019008/index.m3u8?channel-id=ystenlive&Contentid=1000000004000019008&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV武搏世界" tvg-name="NewTV武搏世界" tvg-logo="https://www.xn--rgv465a.top/tvlogo/NewTV武搏世界.png" group-title="NewTV",NewTV武搏世界
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/2000000003000000007/index.m3u8?channel-id=hnbblive&Contentid=2000000003000000007&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV海外剧场" tvg-name="NewTV海外剧场" tvg-logo="https://www.xn--rgv465a.top/tvlogo/NewTV海外剧场.png" group-title="NewTV",NewTV海外剧场
+http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225671/index.m3u8
+#EXTINF:-1 tvg-id="NewTV精品记录" tvg-name="NewTV精品记录" tvg-logo="https://www.xn--rgv465a.top/tvlogo/NewTV精品记录.png" group-title="NewTV",NewTV精品记录
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/1000000004000013730/index.m3u8?channel-id=ystenlive&Contentid=1000000004000013730&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="NewTV魅力潇湘" tvg-name="NewTV魅力潇湘" tvg-logo="https://www.xn--rgv465a.top/tvlogo/NewTV魅力潇湘.png" group-title="NewTV",NewTV魅力潇湘
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/1000000001000006197/index.m3u8?channel-id=ystenlive&Contentid=1000000001000006197&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="欢笑剧场" tvg-name="欢笑剧场" tvg-logo="https://www.xn--rgv465a.top/tvlogo/欢笑剧场.png" group-title="上海频道",欢笑剧场
+http://[2409:8087:5e00:24::1e]:6060/000000001000/5000000002000009455/1.m3u8
+#EXTINF:-1 tvg-id="都市剧场" tvg-name="都市剧场" tvg-logo="https://www.xn--rgv465a.top/tvlogo/都市剧场.png" group-title="上海频道",都市剧场
+http://[2409:8087:5e00:24::1e]:6060/000000001000/5000000011000031111/1.m3u8
+#EXTINF:-1 tvg-id="湖北垄上" tvg-name="湖北垄上" tvg-logo="https://www.xn--rgv465a.top/tvlogo/湖北垄上.png" group-title="湖北频道",湖北垄上
+http://[2409:8087:4c0a:22:1::11]:6410/170000001115/UmaiCHAN638072463c333/index.m3u8?AuthInfo=9kOOdBn7MFF%2F2bWjKgahUUAdKgLqNB5aOAUhcp5CeNL%2Be1h4FfA5QqwJ7IPOz3p2qIS7djSxm17Htd%2FckZkm%2FVqsKHEJFJt26ju9iibzMEo
+#EXTINF:-1 tvg-id="湖北教育" tvg-name="湖北教育" tvg-logo="https://www.xn--rgv465a.top/tvlogo/湖北教育.png" group-title="湖北频道",湖北教育
+http://[2409:8087:4c0a:22:1::11]:6410/170000001115/UmaiCHAN638072a6cbbf6/index.m3u8?AuthInfo=9kOOdBn7MFF%2F2bWjKgahUUAdKgLqNB5aOAUhcp5CeNKTFQuOKNd5i0HMa3ydMWIQ6kJ2fBJGJ77BLTXK72CqUYQsX3ZguYt0954s9hfZTfc
+#EXTINF:-1 tvg-id="湖北生活" tvg-name="湖北生活" tvg-logo="https://www.xn--rgv465a.top/tvlogo/湖北生活.png" group-title="湖北频道",湖北生活
+http://[2409:8087:4c0a:22:1::11]:6410/170000001115/UmaiCHAN638072c62e405/index.m3u8?AuthInfo=9kOOdBn7MFF%2F2bWjKgahUUAdKgLqNB5aOAUhcp5CeNKJPodw5BcDirSOw7egztI5bUvJjqPzSNAhrA37GrbRBIAjGQpzP0QmgsmuHnQyd2c
+#EXTINF:-1 tvg-id="湖北综合" tvg-name="湖北综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/湖北综合.png" group-title="湖北频道",湖北综合
+http://[2409:8087:4c0a:22:1::11]:6410/170000001115/UmaiCHAN638072216f7da/index.m3u8?AuthInfo=9kOOdBn7MFF%2F2bWjKgahUUAdKgLqNB5aOAUhcp5CeNLx3R3LdIBdA5q61lut1LwZcw4SC2tJubc%2Bq5t%2F61jvWCtjrJL0x%2BHncPgdmcbBW9I
+#EXTINF:-1 tvg-id="BRTV国际频道" tvg-name="BRTV国际频道" tvg-logo="https://www.xn--rgv465a.top/tvlogo/BRTV国际频道.png" group-title="北京频道",BRTV国际频道
+http://[2409:8087:1:20:20::2a]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226510/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EIfgL7tTUNqHAIdgvKuwj8A%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNPr9j5nfyiWS_jEXD6m401A%2CEND
+#EXTINF:-1 tvg-id="BRTV新闻" tvg-name="BRTV新闻" tvg-logo="https://www.xn--rgv465a.top/tvlogo/BRTV新闻.png" group-title="北京频道",BRTV新闻
+http://[2409:8087:1:20:20::2a]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226437/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EncK5uEAdYwWMsf8WJWI1mQ%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNO_LSIQh_h2P54Cz-MqgJqC%2CEND
+#EXTINF:-1 tvg-id="BRTV生活" tvg-name="BRTV生活" tvg-logo="https://www.xn--rgv465a.top/tvlogo/BRTV生活.png" group-title="北京频道",BRTV生活
+http://[2409:8087:1:20:20::2a]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226514/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7Es-PVNcPJsjr_oBdcXGT40g%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNMWvZ0r6eMXcXJOGrCpJiq1%2CEND
+#EXTINF:-1 tvg-id="BRTV财经" tvg-name="BRTV财经" tvg-logo="https://www.xn--rgv465a.top/tvlogo/BRTV财经.png" group-title="北京频道",BRTV财经
+http://[2409:8087:1:20:20::2a]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226516/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7Eh9_SEkmWeMdS1TMnIILZgg%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNPIiicEW7OIvk1s-X-PXHqO%2CEND
+#EXTINF:-1 tvg-id="北京4K超清" tvg-name="北京4K超清" tvg-logo="https://www.xn--rgv465a.top/tvlogo/北京4K超清.png" group-title="北京频道",北京4K超清
+http://[2409:8087:1:20:20::26]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226550/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~e2qS8h6u-xp3gd50vNr1sw~_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNPPFD3HVWEytEVyliOxehfe%2CEND
+#EXTINF:-1 tvg-id="淘BABY" tvg-name="淘BABY" tvg-logo="https://www.xn--rgv465a.top/tvlogo/淘BABY.png" group-title="北京频道",淘BABY
+http://[2409:8087:1:20:20::2c]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226554/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EN0sbBMpQv4sLsW5foy3YfA%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNNg3bzRax0E9tLmO9xgXVx8%2CEND
+#EXTINF:-1 tvg-id="淘剧场" tvg-name="淘剧场" tvg-logo="https://www.xn--rgv465a.top/tvlogo/淘剧场.png" group-title="北京频道",淘剧场
+http://[2409:8087:1:20:20::26]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226553/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EQaJ92NID2SpQlY6_VJVogg%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNOuQYJeiYEeFWTkFfE86Vq-%2CEND
+#EXTINF:-1 tvg-id="淘娱乐" tvg-name="淘娱乐" tvg-logo="https://www.xn--rgv465a.top/tvlogo/淘娱乐.png" group-title="北京频道",淘娱乐
+http://[2409:8087:1:20:20::2c]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226551/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7Ex0efg9fpenP8E8lWJUb5Lg%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNNg3bzRax0E9tLmO9xgXVx8%2CEND
+#EXTINF:-1 tvg-id="萌宠TV" tvg-name="萌宠TV" tvg-logo="https://www.xn--rgv465a.top/tvlogo/萌宠TV.png" group-title="北京频道",萌宠TV
+http://[2409:8087:1:20:20::26]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226555/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7E_PpxWPtvSZRFtu_Ged-vQ%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNO0istnBuoA2R9ODSCqyIyS%2CEND
+#EXTINF:-1 tvg-id="NewTV武搏世界" tvg-name="武术世界" tvg-logo="https://www.xn--rgv465a.top/tvlogo/武术世界.png" group-title="河南频道",武术世界
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/2000000003000000007/index.m3u8?channel-id=hnbblive&Contentid=2000000003000000007&livemode=1&stbId=YanG-1989
+#EXTINF:-1 tvg-id="黑龙江少儿" tvg-name="黑龙江少儿" tvg-logo="https://www.xn--rgv465a.top/tvlogo/黑龙江少儿.png" group-title="黑龙江频道",黑龙江少儿
+http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226304/index.m3u8
+#EXTINF:-1 tvg-id="黑龙江影视" tvg-name="黑龙江影视" tvg-logo="https://www.xn--rgv465a.top/tvlogo/黑龙江影视.png" group-title="黑龙江频道",黑龙江影视
+http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226298/index.m3u8
+#EXTINF:-1 tvg-id="黑龙江文体" tvg-name="黑龙江文体" tvg-logo="https://www.xn--rgv465a.top/tvlogo/黑龙江文体.png" group-title="黑龙江频道",黑龙江文体
+http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226239/index.m3u8
+#EXTINF:-1 tvg-id="黑龙江新闻法治" tvg-name="黑龙江新闻法治" tvg-logo="https://www.xn--rgv465a.top/tvlogo/黑龙江新闻法治.png" group-title="黑龙江频道",黑龙江新闻法治
+http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226330/index.m3u8
+#EXTINF:-1 tvg-id="黑龙江都市" tvg-name="黑龙江都市" tvg-logo="https://www.xn--rgv465a.top/tvlogo/黑龙江都市.png" group-title="黑龙江频道",黑龙江都市
+http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226301/index.m3u8
