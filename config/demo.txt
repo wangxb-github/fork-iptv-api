@@ -211,7 +211,6 @@ tvbs閩南
 八大戏剧台
 八大戲劇
 八大第一
-八大第一台
 八大綜合
 八大综合
 八大综合台
@@ -225,7 +224,6 @@ tvbs閩南
 凤凰香港
 凤凰香港台
 创世电视
-动物星球
 動物星球
 千禧經典台
 华艺中文台
@@ -309,7 +307,6 @@ tvbs閩南
 纬来综合台
 纬来育乐台
 美亚C+
-美亚电影
 美食星球
 翡翠
 耀才财经
@@ -328,7 +325,6 @@ tvbs閩南
 靖天映画
 靖天欢乐台
 靖天电影台
-靖天综合台
 靖天育乐台
 靖天资讯台
 靖天電影
@@ -445,26 +441,41 @@ iNews新闻台
 CHC动作电影
 CHC家庭影院
 CHC影迷电影
+amc电影台
 万合出品
+下饭神剧
+凌儿影院
 刀刀影院
 刘德华
 动作影院
 华语影视
+华语经典
+变种人片
+吃米滴虫
 周星驰
 喜剧影院
+喜剧电影
+女神电影
+小黛兮影
 影迷数位电影
+恐怖惊悚
 成龙
 林正英
+梁家辉
 橙记港剧
 洪金宝
 淘电影
-灾难片
 热门港剧
+特辑影院
+王晶
+瑶瑶恐怖
 甄子丹
 电影_不挤影院
 电影_丧尸片
 电影_动作电影
 电影_变形金刚
+电影_古墓系列
+电影_喜乐影院
 电影_喜剧专场
 电影_战争片
 电影_搞笑喜剧
@@ -472,14 +483,26 @@ CHC影迷电影
 电影_热血
 电影_犯罪片
 电影_经典女神
+电影_许氏三杰
 电影_谍战
 电影_谍战片
 电影_贺岁片
 电影_赛车
 电影_高能反转
 电影_黑帮片
+电影剧场
 经典电影
+美亚电影
+花卷陪看
+萌小鬼片
+蚂蚱影院
+豆瓣高分
+避风影院
+邦德影院
 邵氏影院
+霍格沃茨
+鱼宝恐怖
+麓山迷踪
 
 电视剧,#genre#
 三国演义
@@ -530,6 +553,7 @@ CHC影迷电影
 琅琊榜
 知否知否
 神医喜来乐
+神探狄仁杰
 神探狄仁杰第一部
 神探狄仁杰第三部
 神探狄仁杰第二部
@@ -557,7 +581,8 @@ CHC影迷电影
 综艺频道,#genre#
 宋小宝小品
 开心麻花小品
-相声小品
+经典小品
+许君聪小品
 贾玲小品
 赵本山小品
 
@@ -645,6 +670,7 @@ NewTV魅力潇湘
 
 体育频道,#genre#
 五星体育
+劲爆体育
 咪咕体育
 广东体育
 睛彩竞技
@@ -653,6 +679,7 @@ NewTV魅力潇湘
 足球频道
 辽宁体育
 风云足球
+魅力足球
 
 咪咕直播,#genre#
 咪咕体育
@@ -665,32 +692,100 @@ NewTV魅力潇湘
 CN卡通
 中华小当家
 优漫卡通
-动漫秀场
 卡酷少儿
+名侦探柯南
 哈哈炫动
 嘉佳卡通
 新动漫
 河北少儿科教
 浙江少儿
 海南少儿
+海绵宝宝
 猫和老鼠
-蜡笔小新
 金鹰卡通
 龙华卡通
 
 国际台,#genre#
+ABC2WMAR
+ABC4Seattle(KOMO-TV)
+ABC7Denver(KMGH)
+ABCNews-720P（美国）
+ABCNewsLive1
+ABCNewsLive10
+ABCNewsLive2
+ABCNewsLive3
+ABCNewsLive4
+ABCNewsLive5
+ABCNewsLive6
+ABCNewsLive7
+ABCNewsLive8
+ABCNewsLive9
+ABCNewsUSHD
+ABCTV
+ABCnews-720P
 AlabbassiaTV
+BBCWorldNews
 BBS佛教广播
+BloombergAsia
+BloombergTVAustralia
+CBS3OmahaNE(KMTV-TV)
+CBS6AlbanyNY(WRGB)
+CBSNBaltimore
+CBSNSacramento
 CNA
+CNBCHD
 CNN
-Fox新闻
+CNNInternationalEurope
+FOX
+FOXNews（美国）
+FoxSoul
+France24Arabic
+France24English
+France24Español
+France24Français
+France24|French
+France|Francophonie24
+MTV
+MTVClub
+MTVHDCA
+NBC15MadisonWI(WMTVNBC)
+NBC26(WGBA)
+NBCHD
+NBCNewsNow
+NBCNewsNow|HD
+NBCNewsNow|Source1
+NBCNewsNow|Source2
+NBCWTMJ4
+NHKWorldJapan
+RTArabic
+RTDE
+RTDoc-Русский
+RTDocumentary
+RTFrançais
+RTVBPK
+RTnews(俄罗斯)
+SKY
+Sky1Racing
+Sky2Racing
+SkyNews(US)
+SkyNewsExtra1
+SkyNewsExtra2(540p)
+SkyNewsExtra3(540p)
 VOA美国之音
-テレビ朝日
+[美国]3ABNRussia
+[美国]AlientoVision
+[美国]ChristianYouthChannel(CYC)
+[美国]LoupeArt
+[美国]OANPlus
+[美国]OMLonRevry
+[美国]PAC12Insider
+[美国]SKWAD
+[美国]WhitePlainsCommunityMedia
+[美国]WuTangCollection
+skya
 东森美洲卫视
-半·新闻
 半岛新闻
 新加坡国际
-日本テレビ
 朝鲜中央台
 &FlixHD
 ABCNewsLive
@@ -698,7 +793,6 @@ AXSTVNow
 AlJazeera
 Arirang
 BBC
-BloombergAsia
 BloombergOriginals
 CBCNews
 CBNNews
@@ -715,7 +809,6 @@ IONPlus
 KBSworld
 LoveNature
 MovieSphere
-NBCNewsNow
 NHKWorld
 Newsmax
 NextUpLiveComedy
@@ -728,7 +821,6 @@ RTDocumentary（英语纪录）
 RTEspañol（西语）
 RTFrançais（法语）
 RTNews（英语国际）
-SKY
 SkyNews
 Stadium
 TBS
@@ -744,9 +836,7 @@ WionNews
 半岛电视台
 半岛电视台英文
 AlJazeeraEnglish
-France24English
 France24French
-France24Arabic
 DeutscheWelle
 TV5Monde
 CartoonNetwork
@@ -759,6 +849,7 @@ Eurosport2
 世界地理
 人与自然
 动物世界
+动物星球
 易中天品三国
 航拍中国第一季
 航拍中国第三季
@@ -768,11 +859,12 @@ Eurosport2
 梨园
 
 上海频道,#genre#
+七彩戏剧
+上海外语
 上海教育
 上海都市
 上海都市频道
 东方影视
-东方财经
 全纪实
 哈哈炫动
 崇明电视台
@@ -795,6 +887,7 @@ Eurosport2
 湖南经视
 湖南视剧
 湖南都市
+衡阳新闻综合
 金鹰纪实
 长沙女性
 长沙政法
@@ -819,6 +912,7 @@ Eurosport2
 湖北经视
 湖北综合
 荆门新闻综合
+麻城综合
 
 广东频道,#genre#
 东莞新闻综合
@@ -837,40 +931,63 @@ Eurosport2
 广州法治
 广州竞赛
 广州综合
-汕头综合
+汕头经济
 河源公共
 河源综合
 深圳少儿
 深圳电视剧频道
+深圳财经生活
 生活
 番禺综合
 
 浙江频道,#genre#
+YMG未来
+上虞文化
+上虞文化影院
+上虞新商都
+上虞新闻综合
+东阳影视生活
 中国蓝新闻
 之江纪录
 之江记录
+云和新闻
 云和新闻综合
+余姚姚江文化
+余姚综合
 余杭新闻
 余杭未来
+余杭未来E
+余杭综合
 兰溪新闻
+兰溪新闻综合
 嘉兴新闻综合
 姚江文化
 嵊州新闻
 嵊泗综合
 平湖新闻
+平湖新闻综合
 平湖民生
+平湖民生休闲
 庆元综合
 开化公园
 开化国家公园
 开化新闻
+开化新闻综合
 文成新闻综合
+文成综合
 新昌新闻综合
+新昌生活
 普陀新闻
 普陀电视台
+松阳综合
+武义新闻综合
+永嘉新闻综合
+洞头综合
 浙江休闲台
 浙江公共新闻
 浙江国际
 浙江少儿
+浙江影视
 浙江教科
 浙江教科影视
 浙江教育
@@ -883,27 +1000,30 @@ Eurosport2
 浙江经济
 浙江钱江
 海宁新闻综合
-湖州公共民生
-湖州文化娱乐
-湖州新闻综合
-绍兴公共
-绍兴文化
-绍兴文化影院
-绍兴新闻
-绍兴新闻综合
+湖州公共
+缙云新闻综合
+缙云综合
 苍南新闻
 苍南新闻综合
 萧山新闻
+萧山新闻综合
+萧山生活
 萧山综合
 衢江新闻
+衢江新闻综合
 诸暨新闻
+诸暨新闻综合
 象山新闻
 象山新闻综合
 象山综合
-钱江都市
+遂昌综合
 青田电视
 青田电视台
 龙泉新闻
+龙泉新闻综合
+龙游新闻
+龙游新闻综合
+龙游生活娱乐
 
 山东频道,#genre#
 山东体育
@@ -914,6 +1034,8 @@ Eurosport2
 山东新闻
 山东生活
 山东综艺
+潍坊新闻综合
+青岛城阳
 青州综合
 
 江苏频道,#genre#
@@ -931,6 +1053,7 @@ Eurosport2
 新沂新闻频道
 无锡新闻综合
 无锡都市资讯
+武进新闻频道
 武进生活频道
 江苏体育休闲
 江苏城市
@@ -962,11 +1085,10 @@ Eurosport2
 安徽影视频道
 安徽经济生活
 安徽综艺体育
-广德生活
+广德新闻综合
 歙县综合
 祁门综合
 铜陵新闻综合
-阜南新闻综合
 
 海南频道,#genre#
 海南公共
@@ -1005,12 +1127,15 @@ Eurosport2
 
 山西频道,#genre#
 万荣综合
+古县综合
 大宁综合
 太谷新闻综合
 定襄综合
 山西影视
 山西文体生活
 山西社会与法治
+平遥新闻综合
+怀仁综合
 长子综合
 阳曲综合
 
@@ -1028,6 +1153,9 @@ BRTV财经
 优优宝贝
 北京4K超清
 北京新闻
+北京生活
+北京科教
+北京财经
 淘BABY
 淘剧场
 淘娱乐
@@ -1037,6 +1165,7 @@ BRTV财经
 车迷频道
 
 重庆频道,#genre#
+垫江综合
 江津新闻综合
 涪陵电视台
 荣昌综合
@@ -1075,10 +1204,8 @@ BRTV财经
 
 广西频道,#genre#
 广西新闻
+来宾综合
 灌阳新闻综合
-
-贵州频道,#genre#
-仁怀新闻
 
 河北频道,#genre#
 昌黎综合
@@ -1130,6 +1257,7 @@ BRTV财经
 哈尔滨影视
 哈尔滨新闻综合
 哈尔滨生活
+哈尔滨资讯
 哈尔滨都市咨询
 甘南县综合
 黑龙江公共农村
@@ -1151,10 +1279,12 @@ BRTV财经
 桦甸综合
 梅河口综合
 汪清综合
+珲春新闻综合
 磐石综合
 舒兰新闻综合
 辉南新闻综合
 通化县综合
+长白山电视台
 靖宇综合
 龙井综合
 
@@ -1175,6 +1305,8 @@ BRTV财经
 万源新闻综合
 乐山新闻综合
 乐至综合
+井研综合
+仁寿综合
 利州综合
 剑阁综合
 叙州新闻综合
@@ -1219,7 +1351,6 @@ BRTV财经
 雅安新闻综合
 青川综合
 青神综合
-龙泉新闻综合
 
 天津频道,#genre#
 天津卫视
@@ -1228,16 +1359,17 @@ BRTV财经
 天津都市
 
 新疆频道,#genre#
+伊犁哈萨克
 伊犁经济法制
 伊犁维吾尔
 兵团五师双河新闻综合
 奎屯哈萨克语
 新疆卫视
+新疆奎屯汉语综合
 玛纳斯综合
 
 收音机频道,#genre#
 中国之声
-音乐之声
 
 4K频道,#genre#
 CCTV4K真4K
@@ -1265,15 +1397,11 @@ CCTV发现之旅
 CCTV老故事
 CGTN
 CGTN纪录
-七彩戏剧
-上海外语
 上海新闻综合
 上海第一财经
 上视纪实人文
 乐游
-劲爆体育
 四海钓鱼
-魅力足球
 
 备用频道,#genre#
 上海卫视
@@ -1299,7 +1427,9 @@ CCTV-8
 CCTV-9
 CETV-01
 CETV-04
+东方财经
 乐游频道
+动漫秀场
 睛彩广场
 金色学堂
 黑龙江视
@@ -1418,7 +1548,6 @@ iHOY爱历史
 动画频道,#genre#
 七龙珠
 内蒙古少儿
-名侦探柯南
 哆啦A梦
 喜羊羊与灰太狼
 宁夏少儿
@@ -1426,6 +1555,7 @@ iHOY爱历史
 灌篮高手
 甘肃少儿
 精灵宝可梦
+蜡笔小新
 韩国EBS少儿
 
 虎牙影视,#genre#
